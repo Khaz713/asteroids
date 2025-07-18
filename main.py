@@ -56,6 +56,10 @@ def main():
         screen.fill("black")
         screen.blit(font.render(f"SCORE: {score}", True, "black", "white"), (0, 0))
         screen.blit(font.render(f"LIVES: {lives}", True, "black", "white"), (0, 34))
+        if player.weapon == 0:
+            screen.blit(font.render(f" I ", True, "black", "white"), (0, 68))
+        if player.weapon == 1:
+            screen.blit(font.render(f" V ", True, "black", "white"), (0, 68))
         for obj in drawable:
             obj.draw(screen)
 
